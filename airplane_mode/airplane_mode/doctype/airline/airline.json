@@ -1,5 +1,6 @@
 {
  "actions": [],
+ "allow_guest_to_view": 1,
  "allow_rename": 1,
  "autoname": "prompt",
  "creation": "2025-06-30 00:35:19.683457",
@@ -9,7 +10,11 @@
   "section_break_d5ti",
   "founding_year",
   "customer_care_number",
-  "headquarter"
+  "headquarter",
+  "website",
+  "route",
+  "published",
+  "company_logo"
  ],
  "fields": [
   {
@@ -34,17 +39,43 @@
    "in_list_view": 1,
    "label": "Headquarter",
    "reqd": 1
+  },
+  {
+   "fieldname": "website",
+   "fieldtype": "Data",
+   "label": "Website",
+   "options": "URL"
+  },
+  {
+   "fieldname": "route",
+   "fieldtype": "Data",
+   "label": "Route"
+  },
+  {
+   "default": "0",
+   "fieldname": "published",
+   "fieldtype": "Check",
+   "label": "Published"
+  },
+  {
+   "fieldname": "company_logo",
+   "fieldtype": "Attach Image",
+   "hidden": 1,
+   "label": "Company Logo"
   }
  ],
  "grid_page_length": 50,
+ "has_web_view": 1,
+ "image_field": "company_logo",
  "index_web_pages_for_search": 1,
+ "is_published_field": "published",
  "links": [
   {
    "link_doctype": "Airplane",
    "link_fieldname": "airline"
   }
  ],
- "modified": "2025-06-30 21:28:02.907249",
+ "modified": "2025-07-18 12:25:07.638294",
  "modified_by": "Administrator",
  "module": "Airplane Mode",
  "name": "Airline",
@@ -64,6 +95,7 @@
    "write": 1
   }
  ],
+ "route": "airline",
  "row_format": "Dynamic",
  "sort_field": "modified",
  "sort_order": "DESC",

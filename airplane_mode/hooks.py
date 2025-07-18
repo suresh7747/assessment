@@ -5,6 +5,14 @@ app_description = "for airplane management"
 app_email = "sureshsuneri774@gmail.com"
 app_license = "mit"
 
+doctype_js = {
+  "Airline": "apps/airplane_mode/airplane_mode/airplane_mode/doctype/airline/airline.js"
+}
+
+doctype_js = {
+  "Airplane Ticket": "apps/airplane_mode/airplane_mode/airplane_mode/doctype/airplane_ticket/airplane_ticket.js"
+}
+
 # Apps
 # ------------------
 

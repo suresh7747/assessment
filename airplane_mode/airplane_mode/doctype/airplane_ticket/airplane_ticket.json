@@ -13,6 +13,7 @@
   "destination_airport",
   "source_airport_code",
   "destination_airport_code",
+  "section_break",
   "departure_date",
   "departure_time",
   "duration_of_flight",
@@ -21,7 +22,8 @@
   "flight_price",
   "total_amount",
   "airplane_flight",
-  "seat"
+  "seat",
+  "gate_number"
  ],
  "fields": [
   {
@@ -51,7 +53,7 @@
    "fieldtype": "Link",
    "in_list_view": 1,
    "label": "Source Airport",
-   "options": "Airport",
+   "options": "Airplane Flight",
    "reqd": 1
   },
   {
@@ -59,11 +61,11 @@
    "fieldtype": "Link",
    "in_list_view": 1,
    "label": "Destination Airport",
-   "options": "Airport",
+   "options": "Airplane Flight",
    "reqd": 1
   },
   {
-   "fetch_from": "source_airport.code",
+   "fetch_from": "source_airport.source_airport_code",
    "fieldname": "source_airport_code",
    "fieldtype": "Data",
    "in_list_view": 1,
@@ -72,7 +74,7 @@
    "reqd": 1
   },
   {
-   "fetch_from": "destination_airport.code",
+   "fetch_from": "destination_airport.destination_airport_code",
    "fieldname": "destination_airport_code",
    "fieldtype": "Data",
    "in_list_view": 1,
@@ -139,13 +141,23 @@
    "fieldtype": "Data",
    "label": "Seat",
    "read_only": 1
+  },
+  {
+   "fieldname": "section_break",
+   "fieldtype": "Section Break",
+   "label": "Departure Details"
+  },
+  {
+   "fieldname": "gate_number",
+   "fieldtype": "Data",
+   "label": "Gate Number"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2025-07-01 14:23:45.194350",
+ "modified": "2025-07-18 17:13:11.597659",
  "modified_by": "Administrator",
  "module": "Airplane Mode",
  "name": "Airplane Ticket",

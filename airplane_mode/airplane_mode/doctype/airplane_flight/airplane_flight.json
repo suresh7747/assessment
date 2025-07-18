@@ -17,7 +17,8 @@
   "destination_airport",
   "source_airport_code",
   "destination_airport_code",
-  "tickets"
+  "tickets",
+  "crew_members"
  ],
  "fields": [
   {
@@ -102,6 +103,12 @@
    "fieldtype": "Link",
    "label": "Tickets",
    "options": "Airplane Ticket"
+  },
+  {
+   "fieldname": "crew_members",
+   "fieldtype": "Table",
+   "label": "Crew Members",
+   "options": "Flight Crew Assignment"
   }
  ],
  "grid_page_length": 50,
@@ -113,7 +120,7 @@
    "link_fieldname": "airplane_flight"
   }
  ],
- "modified": "2025-07-01 14:33:37.206568",
+ "modified": "2025-07-18 17:04:36.258445",
  "modified_by": "Administrator",
  "module": "Airplane Mode",
  "name": "Airplane Flight",

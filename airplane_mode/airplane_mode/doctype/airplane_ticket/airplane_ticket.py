@@ -4,6 +4,7 @@
 import frappe
 import random
 import string
+from frappe import throw, _
 
 from frappe.model.document import Document
 
@@ -38,3 +39,22 @@ class AirplaneTicket(Document):
     def before_insert(self):
         seat_number = f"{random.randint(1, 99)}{random.choice(['A', 'B', 'C', 'D', 'E'])}"
         self.seat = seat_number
+
+    def validate(self):
+        if not self.airplane_flight:
+            return 
+
+        flight = frappe.get_doc('Airplane Flight', self.airplane_flight)
+
+        if not flight.airplane:
+            return  
+
+        airplane = frappe.get_doc('Airplane', flight.airplane)
+
+        ticket_count = frappe.db.count('Airplane Ticket', {
+            'airplane_flight': self.airplane_flight,
+            'docstatus': ['<', 2]  
+        })
+
+        if ticket_count >= airplane.capacity:
+            throw(_('Cannot create ticket: Airplane is fully booked (Capacity: {0})').format(airplane.capacity))
