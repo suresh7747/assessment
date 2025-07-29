@@ -1,7 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "format:{airplane}-{MM}-{YYYY}-##### ",
+ "autoname": "format:{airplane}-{MM}-{YYYY}-{###}",
  "creation": "2025-07-01 12:40:45.734591",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -18,7 +18,8 @@
   "source_airport_code",
   "destination_airport_code",
   "tickets",
-  "crew_members"
+  "crew_members",
+  "gate_number"
  ],
  "fields": [
   {
@@ -109,6 +110,11 @@
    "fieldtype": "Table",
    "label": "Crew Members",
    "options": "Flight Crew Assignment"
+  },
+  {
+   "fieldname": "gate_number",
+   "fieldtype": "Data",
+   "label": "Gate Number"
   }
  ],
  "grid_page_length": 50,
@@ -120,7 +126,7 @@
    "link_fieldname": "airplane_flight"
   }
  ],
- "modified": "2025-07-18 17:04:36.258445",
+ "modified": "2025-07-21 18:04:06.278051",
  "modified_by": "Administrator",
  "module": "Airplane Mode",
  "name": "Airplane Flight",

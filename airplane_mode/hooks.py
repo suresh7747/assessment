@@ -13,6 +13,22 @@ doctype_js = {
   "Airplane Ticket": "apps/airplane_mode/airplane_mode/airplane_mode/doctype/airplane_ticket/airplane_ticket.js"
 }
 
+scheduler_events = {
+    "daily": [
+        "airplane_mode.airport_shop_management.rent.send_rent_reminders"
+    ]
+}
+
+doctype_js = {
+    "Airport Shop": "public/airport_shop.js"
+}
+
+web_include_js = "/assets/airplane_mode/js/rm.js"
+
+fixtures =[
+    "Shop Type",
+]
+
 # Apps
 # ------------------
 
@@ -38,7 +54,7 @@ doctype_js = {
 
 # include js, css files in header of web template
 # web_include_css = "/assets/airplane_mode/css/airplane_mode.css"
-# web_include_js = "/assets/airplane_mode/js/airplane_mode.js"
+
 
 # include custom scss in every website theme (without file extension ".scss")
 # website_theme_scss = "airplane_mode/public/scss/website"

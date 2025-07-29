@@ -28,5 +28,22 @@ frappe.ui.form.on('Airplane Ticket', {
       });
       d.show();
     });
+    frm.add_custom_button('change_rate',() =>{
+      frappe.prompt({
+        fieldname:"rate",
+        label:"Rate",
+        fieldtype:"float",
+        reqd:1,
+      },(data)=> {
+        frm.set_value("total_amount",data.rate)
+        frm.save()
+      })
+    })
   }
 });
+
+frappe.ui.form.on('Add Ons', {
+  item(frm,cdt,cdn){
+    console.log(cdt,cdn)
+  }
+})

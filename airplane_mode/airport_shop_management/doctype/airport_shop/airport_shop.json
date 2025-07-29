@@ -1,5 +1,6 @@
 {
  "actions": [],
+ "allow_guest_to_view": 1,
  "allow_rename": 1,
  "creation": "2025-07-18 18:37:34.997694",
  "doctype": "DocType",
@@ -13,7 +14,11 @@
   "rent_amount",
   "contract_expiry_date",
   "status",
-  "tenant"
+  "tenant",
+  "shop_type",
+  "is_published",
+  "route",
+  "shop_image"
  ],
  "fields": [
   {
@@ -62,12 +67,35 @@
    "fieldtype": "Link",
    "label": "Tenant",
    "options": "Tenant"
+  },
+  {
+   "fieldname": "shop_type",
+   "fieldtype": "Link",
+   "label": "Shop Type",
+   "options": "Shop Type"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_published",
+   "fieldtype": "Check",
+   "label": "Is Published"
+  },
+  {
+   "fieldname": "route",
+   "fieldtype": "Data",
+   "label": "Route"
+  },
+  {
+   "fieldname": "shop_image",
+   "fieldtype": "Attach Image",
+   "label": "Shop Image"
   }
  ],
  "grid_page_length": 50,
- "index_web_pages_for_search": 1,
+ "has_web_view": 1,
+ "is_published_field": "is_published",
  "links": [],
- "modified": "2025-07-18 18:49:50.761617",
+ "modified": "2025-07-24 11:49:57.327175",
  "modified_by": "Administrator",
  "module": "Airport Shop Management",
  "name": "Airport Shop",
@@ -86,8 +114,11 @@
    "write": 1
   }
  ],
+ "route": "shop",
  "row_format": "Dynamic",
+ "show_title_field_in_link": 1,
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": []
+ "states": [],
+ "title_field": "shop_name"
 }

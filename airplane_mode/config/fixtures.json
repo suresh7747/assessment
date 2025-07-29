@@ -1,0 +1,8 @@
+[
+  {
+    "dt": "Shop Type",
+    "filters": [
+      ["type_name", "in", ["Stall", "Walk-through", "Normal"]]
+    ]
+  }
+]

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portal Page</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+</head>
+<body>
+    <main class="container">
+        <h2>{{my_secret_msg}}</h2>
+        <h1> Shops</h1>
+        {% set shops = frappe.db.get_all("Airport Shop", fields=["shop_name"])%}
+        <ol>
+            {% for shop in shops%}
+              <li>{{shop.shop_name}}</li>
+            {%endfor%}
+        </ol>
+    </main>
+    <script src="/assests/airport_shop_management/js/myfile.js"></script>
+</body>
+</html>

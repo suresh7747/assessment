@@ -58,3 +58,5 @@ class AirplaneTicket(Document):
 
         if ticket_count >= airplane.capacity:
             throw(_('Cannot create ticket: Airplane is fully booked (Capacity: {0})').format(airplane.capacity))
+    
+    

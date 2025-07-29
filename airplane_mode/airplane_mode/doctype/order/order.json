@@ -1,0 +1,82 @@
+{
+ "actions": [],
+ "autoname": "format:ATO-{DD}-{MM}-{YYYY}-{###}",
+ "creation": "2025-07-24 13:19:26.704225",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "ticket",
+  "column_break_dotd",
+  "customer_name",
+  "section_break_ntgq",
+  "address",
+  "column_break_dtvq",
+  "status"
+ ],
+ "fields": [
+  {
+   "fieldname": "ticket",
+   "fieldtype": "Link",
+   "label": "Ticket",
+   "options": "Airplane Ticket"
+  },
+  {
+   "fieldname": "column_break_dotd",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "customer_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Customer Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_ntgq",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "address",
+   "fieldtype": "Data",
+   "label": "Address"
+  },
+  {
+   "fieldname": "column_break_dtvq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "New",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "New\nAccepted\nRejected"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-07-24 13:31:27.211222",
+ "modified_by": "Administrator",
+ "module": "Airplane Mode",
+ "name": "Order",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

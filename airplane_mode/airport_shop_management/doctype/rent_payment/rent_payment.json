@@ -1,7 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "format:RENT-.YYYY.-.####",
+ "autoname": "naming_series:RENT-.YYYY.-.MM.-.DD.-.",
  "creation": "2025-07-18 18:50:09.821129",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -10,7 +10,8 @@
   "tenant",
   "shop",
   "payment_date",
-  "amount_paid"
+  "amount_paid",
+  "naming_series"
  ],
  "fields": [
   {
@@ -38,16 +39,22 @@
    "fieldname": "amount_paid",
    "fieldtype": "Currency",
    "label": "Amount Paid"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Naming Series",
+   "options": "RENT-.YYYY.-.MM.-.DD.-."
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-07-18 19:05:00.046735",
+ "modified": "2025-07-21 14:09:17.221427",
  "modified_by": "Administrator",
  "module": "Airport Shop Management",
  "name": "Rent Payment",
- "naming_rule": "Expression",
+ "naming_rule": "By \"Naming Series\" field",
  "owner": "Administrator",
  "permissions": [
   {

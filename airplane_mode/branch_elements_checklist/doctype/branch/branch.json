@@ -1,43 +1,42 @@
 {
  "actions": [],
  "allow_rename": 1,
- "creation": "2025-07-18 18:48:20.420561",
+ "creation": "2025-07-28 14:12:29.037682",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "section_break_t34e",
-  "tenant_name",
-  "email",
-  "phone"
+  "branch_name",
+  "sol_id",
+  "city"
  ],
  "fields": [
   {
-   "fieldname": "section_break_t34e",
-   "fieldtype": "Section Break"
+   "fieldname": "branch_name",
+   "fieldtype": "Data",
+   "label": "Branch Name",
+   "reqd": 1
   },
   {
-   "fieldname": "tenant_name",
+   "fieldname": "sol_id",
    "fieldtype": "Data",
-   "label": "Tenant Name"
+   "in_list_view": 1,
+   "label": "SOL ID",
+   "reqd": 1
   },
   {
-   "fieldname": "email",
+   "fieldname": "city",
    "fieldtype": "Data",
-   "label": "Email"
-  },
-  {
-   "fieldname": "phone",
-   "fieldtype": "Data",
-   "label": "Phone"
+   "label": "City",
+   "reqd": 1
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-07-21 14:25:21.165126",
+ "modified": "2025-07-28 14:15:11.790066",
  "modified_by": "Administrator",
- "module": "Airport Shop Management",
- "name": "Tenant",
+ "module": "branch_elements_checklist",
+ "name": "Branch",
  "owner": "Administrator",
  "permissions": [
   {
@@ -54,9 +53,7 @@
   }
  ],
  "row_format": "Dynamic",
- "show_title_field_in_link": 1,
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": [],
- "title_field": "tenant_name"
+ "states": []
 }

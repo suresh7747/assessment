@@ -14,13 +14,13 @@ def execute(filters=None):
             "fieldname": "airline",
             "fieldtype": "Link",
             "options": "Airline",
-            "width": 200
+            "width": 190
         },
         {
             "label": "Revenue",
             "fieldname": "revenue",
             "fieldtype": "Currency",
-            "width": 150
+            "width": 140
         }
     ]
 
